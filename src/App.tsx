@@ -40,7 +40,7 @@ const calculateCenter = (model: THREE.Object3D) => {
 
 const findAbovePosition = (
   model: THREE.Object3D,
-  scene: THREE.Scene,
+  _scene: THREE.Scene,
   step = 0.1,
 ) => {
   const center = calculateCenter(model);
@@ -283,6 +283,7 @@ function App() {
         window.removeEventListener('contextmenu', handleContextMenu);
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [model, cameraPosition, canvasRef]);
 
   return (
